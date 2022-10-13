@@ -3,9 +3,7 @@
 const countriesContainer = document.querySelector('.countries');
 const countriesDropdown = document.querySelector('#countries');
 
-
 //Receiveing country list from api
-
 const countriesList = async function () {
     try {
         const countriesAll = await fetch("https://restcountries.com/v3.1/all");
@@ -14,9 +12,7 @@ const countriesList = async function () {
         if (!countriesAll.ok) throw new Error('Problem getting location data');
 
         const data = await countriesAll.json();
-        // console.log(data);
         const countriesNames = data.map( country => country.name.common);
-        // console.log(countriesNames);
 
         return countriesNames;
         
@@ -30,13 +26,10 @@ const countryDropdown = async function () {
     try {
         //generating countries list
         const countriesAll = (await countriesList()).sort() 
-        // console.log(countriesAll)
-
-        //creating options list 
-        
-
+    
         //creating markup for dropdown
         const dropdownMarkup = `
+        <option value="">---</option>
         ${countriesAll.map(el => `<option value="${el}">${el}</option>`).join('')}`
 
         countriesDropdown.innerHTML = dropdownMarkup;
@@ -45,7 +38,6 @@ const countryDropdown = async function () {
         throw err;
     }
 }
-
 
 countryDropdown();
 
