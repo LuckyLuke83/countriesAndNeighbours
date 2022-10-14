@@ -111,8 +111,6 @@ body {
 
 .neighbour_container {
   align-self: start;
-  
-
 }
 
 .neighbour_div {
@@ -135,7 +133,7 @@ body {
 .neighbour {
   width: 22rem;
   height: 45%;
-  text-align: center;
+  font-size: 1.4rem;
 }
 
 .neighbour__data {
