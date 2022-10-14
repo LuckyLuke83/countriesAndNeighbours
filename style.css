@@ -24,10 +24,12 @@ body {
 }
 
 .country_div {
+  align-self: start;
   display: flex;
   flex-flow: column;
   align-items: center;
   gap: 2rem;
+  margin-top: 4rem;
 }
 
 .label {
@@ -46,7 +48,6 @@ body {
 .countries {
   /* margin-bottom: 8rem; */
   display: flex;
-  font-size: 2rem;
   opacity: 0;
   transition: opacity 1s;
 }
@@ -92,6 +93,7 @@ body {
   background-color: #eee;
   border-top-left-radius: 0.7rem;
   border-top-right-radius: 0.7rem;
+  border-bottom: #888 1px solid;
 }
 
 /* .neighbour::before {
@@ -107,12 +109,18 @@ body {
   color: #888;
 } */
 
+.neighbour_container {
+  align-self: start;
+  
+
+}
+
 .neighbour_div {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   gap: 4em;
-  
+  justify-content:center;
 }
 
 .neighbour-title {
@@ -163,6 +171,7 @@ body {
   background-color: #eee;
   border-top-left-radius: 0.7rem;
   border-top-right-radius: 0.7rem;
+  border-bottom: rgb(204, 204, 204) 1px solid;
 }
 
 .btn-country {
